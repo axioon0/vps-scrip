@@ -1,0 +1,2 @@
+# vps-scrip
+Auto installer
