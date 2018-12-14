@@ -1,9 +1,10 @@
-# vps-scrip
-Auto installer
-my_port () {
+#!/bin/bash
+
+my_port () 
+{
 #CAPTURE OF VALUES
 total_portas = $ (lsof -V -i tcp -P -n | grep -v "ESTABLISHED" | grep -v "COMMAND" | grep "LISTEN")
-#CRIA TEMPORARY ARCHIVE
+#CREATE TEMPORARY ARCHIVE
 echo "$ total_portas"> ./arqtmp
 #LOOP WITH THE VALUES
 while read port; of
@@ -69,7 +70,7 @@ s=0
 echo -e " \033[1;33m════════════════════════\n${txt[300]}\n════════════════════════\n\033[1;32m"
 for enc in `echo ${encript[@]}`; do
 VAR_EN+="[${s}] - ${enc}\n"
-s=$(($s+1))
+s=$(($s+1))y
 done
 echo -e "${VAR_EN}"
 unset VAR_EN
